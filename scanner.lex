@@ -3,6 +3,10 @@
 /* Declarations section */
 #include "tokens.hpp"
 #include <stdio.h>
+#include "output.hpp"
+#include "parser.hpp"
+#include "parser.tab.hpp"
+using namespace FanC;
 void showToken(char *);
 void printundef();
 %}

@@ -1,0 +1,61 @@
+%{ 
+	#include <iostream>
+	#include "parser.hpp"
+	using namespace std;
+	#define YYSTYPE Node*
+	int yylex();
+	void yyerror(const char*);
+
+%}
+
+
+%right ASSIGN
+%left OR
+%left AND
+%left EQUALITY
+%nonassoc RELATIONAL
+%left ADDITIVE
+%left MULTIPLICATIVE
+%right NOT
+%token VOID
+%token INT
+%token BYTE
+%token B
+%token BOOL
+%token TRUE
+%token FALSE
+%token RETURN
+%token IF
+%nonassoc IFPREC
+%left ELSE
+%token WHILE
+%token BREAK
+%token CONTINUE
+%token PRECOND
+%token SC
+%token COMMA
+%token LBRACE
+%token RBRACE
+%token ID
+%token NUM
+%token STRING
+%token LPAREN
+%token RPAREN
+
+
+%%
+
+Program:	InitProgram OpenScope Funcs	{reduceProgram();}
+
+InitProgram:    {initProgramHeader();}
+
+OpenScope: /*epsilon*/ {reduceOpenScope();}
+
+Funcs: /*epsilon*/ {}
+	| FuncDecl Funcs	{} 
+
+%%
+
+int main() {
+	return yyparse();
+}
