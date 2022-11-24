@@ -3,8 +3,9 @@
 /* Declarations section */
 #include "tokens.hpp"
 #include <stdio.h>
+#include "output.hpp"
+#include "parser.tab.hpp"
 void showToken(char *);
-void printundef();
 %}
 
 %option yylineno
@@ -39,11 +40,17 @@ continue                    return CONTINUE;
 \{                          return LBRACE;
 \}                          return RBRACE;
 =                           return ASSIGN;
-==|!=|<=|>=|<|>             return RELOP;
-{binop}                     return BINOP;
+(<|>|<=|>=)                 return RELATIONAL;
+(==|!=)              		return EQUALITY;
+(\*|\/)                     return MULTIPLICATIVE;
+(\+|-)					    return ADDITIVE;
+[a-zA-Z][a-zA-Z0-9]*		return ID;
+[1-9][0-9]*|0				return NUM;
+\"([^\\\n\r\"]|{es})*\\.([^\\\n\r\"]|{es})*\" 		return STRING;
+
+
+
 \/\/[^\r\n]*                return COMMENT;
-[a-zA-Z][0-9a-zA-Z]*        return ID;
-[1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\\\n\r\"]|{es})*\"     return STRING;
 \"([^\\\n\r\"]|{es})*       printf("Error unclosed string\n");exit(0);
 \"([^\\\n\r\"]|{es})*\\.([^\\\n\r\"]|{es})*\"      return STRING;//printundef();exit(0);
@@ -51,32 +58,3 @@ continue                    return CONTINUE;
 .		printf("Error %s\n",yytext);exit(0);
 
 %%
-void printundef()//needs fix
-{
-    char* current=yytext;
-    printf("Error undefined escape sequence %c\n",current[yyleng-1]);
-}
-void printundefx()
-{
-    char* current=yytext;
-    printf("Error undefined escape sequence %c%c%c\n",current[yyleng-3],current[yyleng-2],current[yyleng-1]);
-}
-void printundefx2()
-{
-    char* current=yytext;
-    printf("Error undefined escape sequence %c%c\n",current[yyleng-2],current[yyleng-1]);
-}
-void showToken(char * name)
-{
-        if(name=="STRING"){
-
-        }
-        else{
-            if(name=="SC"){
-
-            }
-            else{
-                printf("<%d> <%s> <%s>\n", yylineno, name, yytext);
-            }
-        }
-}
