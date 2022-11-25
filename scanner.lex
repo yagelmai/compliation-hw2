@@ -41,11 +41,11 @@ continue                    return CONTINUE;
 \}                          return RBRACE;
 =                           return ASSIGN;
 (<|>|<=|>=)                 return RELATIONAL;
-(==|!=)              		return EQUALITY;
+(==|!=)              		    return EQUALITY;
 (\*|\/)                     return MULTIPLICATIVE;
-(\+|-)					    return ADDITIVE;
-[a-zA-Z][a-zA-Z0-9]*		return ID;
-[1-9][0-9]*|0				return NUM;
+(\+|-)					            return ADDITIVE;
+[a-zA-Z][a-zA-Z0-9]*		    return ID;
+[1-9][0-9]*|0				        return NUM;
 \"([^\\\n\r\"]|{es})*\\.([^\\\n\r\"]|{es})*\" 		return STRING;
 
 
