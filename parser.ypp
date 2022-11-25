@@ -1,4 +1,4 @@
-%										{ 
+%{ 
 	#include <iostream>
 	#include "parser.tab.hpp"	
 	#include <stdlib.h>
@@ -68,27 +68,27 @@ Formals:            /* epsilon */       										{printProductionRule(7);}
 ;
 
 FormalsList:        FormalDecl          										{printProductionRule(9);}
-                    | FormalDecl COMMA FormalsList  							{printProductionRule(10);}
+                    | FormalDecl COMMA FormalsList  									{printProductionRule(10);}
 ;
 
 FormalDecl:         Type ID         				 							{printProductionRule(11);}
 ;
 
 Statements:         Statement           										{printProductionRule(12);}
-                    | Statements Statement  									{printProductionRule(13);}
+                    | Statements Statement  										{printProductionRule(13);}
 ;
 
-Statement:          LBRACE Statements RBRACE    								{printProductionRule(14);}
-                    | Type ID SC 												{printProductionRule(15);}
-                    | Type ID ASSIGN Exp SC  									{printProductionRule(16);}
-                    | AUTO ID ASSIGN Exp SC  									{printProductionRule(17);}
+Statement:          LBRACE Statements RBRACE    									{printProductionRule(14);}
+                    | Type ID SC 											{printProductionRule(15);}
+                    | Type ID ASSIGN Exp SC  										{printProductionRule(16);}
+                    | AUTO ID ASSIGN Exp SC  										{printProductionRule(17);}
                     | ID ASSIGN Exp SC  										{printProductionRule(18);}
                     | Call SC           										{printProductionRule(19);}
                     | RETURN SC         										{printProductionRule(20);}
                     | RETURN Exp SC     										{printProductionRule(21);}
-                    | IF LPAREN Exp RPAREN Statement    						{printProductionRule(22);}
-                    | IF LPAREN Exp RPAREN Statement ELSE Statement 			{printProductionRule(23);}
-                    | WHILE LPAREN Exp RPAREN Statement 						{printProductionRule(24);}
+                    | IF LPAREN Exp RPAREN Statement    								{printProductionRule(22);}
+                    | IF LPAREN Exp RPAREN Statement ELSE Statement 							{printProductionRule(23);}
+                    | WHILE LPAREN Exp RPAREN Statement 								{printProductionRule(24);}
                     | BREAK SC          										{printProductionRule(25);}
                     | CONTINUE SC       										{printProductionRule(26);}
 ;
@@ -126,7 +126,7 @@ Exp:                LPAREN Exp RPAREN           								{printProductionRule(34)
 
 %%
 
-void yyerror(const char*)														{errorSyn(yylineno); exit(1);}
+void yyerror(const char*)											{errorSyn(yylineno); exit(1);}
 
 int main() 										{
 	return yyparse();
