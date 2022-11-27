@@ -14,11 +14,8 @@
 %right ASSIGN
 %left OR
 %left AND
-%left EQUALITY
-%nonassoc RELATIONAL
 %left LBINOP
-%right RBINOP
-%left MULTIPLICATIVE
+%left RBINOP
 %right NOT
 %token VOID
 %token INT
@@ -29,12 +26,10 @@
 %token FALSE
 %token RETURN
 %token IF
-%nonassoc IFPREC
 %left ELSE
 %token WHILE
 %token BREAK
 %token CONTINUE
-%token PRECOND
 %token SC
 %token COMMA
 %token LBRACE
