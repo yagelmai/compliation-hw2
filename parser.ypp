@@ -16,7 +16,8 @@
 %left AND
 %left EQUALITY
 %nonassoc RELATIONAL
-%left ADDITIVE
+%left LBINOP
+%right RBINOP
 %left MULTIPLICATIVE
 %right NOT
 %token VOID
@@ -43,7 +44,7 @@
 %token STRING
 %token LPAREN
 %token RPAREN
-%token RELOP
+%left RELOP
 
 
 %%
@@ -114,8 +115,8 @@ Type:               INT                         								{printProductionRule(30)
 ;
 
 Exp:                LPAREN Exp RPAREN           								{printProductionRule(33);}
-                    |Exp ADDITIVE Exp           								{printProductionRule(34);}
-                    |Exp MULTIPLICATIVE Exp           							{printProductionRule(34);}
+                    | Exp LBINOP Exp           								    {printProductionRule(34);}
+                    | Exp RBINOP Exp           								    {printProductionRule(34);}
                     | ID                        								{printProductionRule(35);}
                     | Call                      								{printProductionRule(36);}
                     | NUM                       								{printProductionRule(37);}
