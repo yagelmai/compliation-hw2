@@ -3,7 +3,6 @@
 /* Declarations section */
 #include "tokens.hpp"
 #include <stdio.h>
-#include "output.hpp"
 void showToken(char *);
 void printundef();
 %}
@@ -13,7 +12,7 @@ void printundef();
 digit   		([0-9])
 letter  		([a-zA-Z])
 whitespace		([\t\n\r ])
-es              (\x5C\x5C|\x5C\x22|\x5C\x6E|\x5C\x72|\x5C\x74|\x5C\x30|\x5C\x78[0-9A-F][0-9A-F])
+es              (\x5C\x5C|\x5C\x22|\x5C\x6E|\x5C\x72|\x5C\x74|\x5C\x30|\x5C\x78[0-9A-F][0-9A-F]|\\[^"])
 binop [(\+|\-|\*|\/)]
 %%
 
@@ -46,10 +45,9 @@ continue                    return CONTINUE;
 [a-zA-Z][0-9a-zA-Z]*        return ID;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\\\n\r\"]|{es})*\"     return STRING;
-\"([^\\\n\r\"]|{es})*       errorLex(yylineno);exit(0);
-\"([^\n\r\"]|{es})*\"       errorLex(yylineno);exit(0);//printundef();exit(0);
+\"([^\\\n\r\"]|{es})*       printf("Error unclosed string\n");exit(0);
 {whitespace}				return -1;
-.		errorLex(yylineno);exit(0);
+.		printf("Error %s\n",yytext);exit(0);
 
 %%
 void printundef()//needs fix
