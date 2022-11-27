@@ -1,0 +1,4 @@
+6: RetType ->  VOID
+7: Formals -> epsilon
+35: Exp -> ID
+line 6: syntax error

@@ -1,0 +1,1261 @@
+6: RetType ->  VOID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+8: Formals -> FormalsList
+31: Type -> BYTE
+39: Exp -> STRING
+46: Exp -> LPAREN Type RPAREN Exp
+37: Exp -> NUM
+33: Exp -> LPAREN Exp RPAREN
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+12: Statements -> Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+42: Exp -> NOT Exp
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+37: Exp -> NUM
+40: Exp -> TRUE
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+43: Exp -> Exp AND Exp
+39: Exp -> STRING
+40: Exp -> TRUE
+30: Type -> INT
+35: Exp -> ID
+46: Exp -> LPAREN Type RPAREN Exp
+34: Exp -> Exp BINOP Exp
+17: Statement -> ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+31: Type -> BYTE
+37: Exp -> NUM
+46: Exp -> LPAREN Type RPAREN Exp
+17: Statement -> ID ASSIGN Exp SC
+12: Statements -> Statement
+37: Exp -> NUM
+41: Exp -> FALSE
+45: Exp -> Exp RELOP Exp
+19: Statement -> RETURN SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+39: Exp -> STRING
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+35: Exp -> ID
+34: Exp -> Exp BINOP Exp
+33: Exp -> LPAREN Exp RPAREN
+38: Exp -> NUM B
+42: Exp -> NOT Exp
+33: Exp -> LPAREN Exp RPAREN
+17: Statement -> ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+40: Exp -> TRUE
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+40: Exp -> TRUE
+42: Exp -> NOT Exp
+25: Statement -> CONTINUE SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+32: Type -> BOOL
+38: Exp -> NUM B
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+42: Exp -> NOT Exp
+37: Exp -> NUM
+42: Exp -> NOT Exp
+20: Statement -> RETURN Exp SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+40: Exp -> TRUE
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+37: Exp -> NUM
+40: Exp -> TRUE
+33: Exp -> LPAREN Exp RPAREN
+45: Exp -> Exp RELOP Exp
+17: Statement -> ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+12: Statements -> Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+27: Call -> ID LPAREN RPAREN
+18: Statement -> Call SC
+12: Statements -> Statement
+32: Type -> BOOL
+41: Exp -> FALSE
+46: Exp -> LPAREN Type RPAREN Exp
+19: Statement -> RETURN SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+40: Exp -> TRUE
+33: Exp -> LPAREN Exp RPAREN
+35: Exp -> ID
+41: Exp -> FALSE
+45: Exp -> Exp RELOP Exp
+43: Exp -> Exp AND Exp
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+6: RetType ->  VOID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+8: Formals -> FormalsList
+30: Type -> INT
+15: Statement -> Type ID SC
+12: Statements -> Statement
+39: Exp -> STRING
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+35: Exp -> ID
+33: Exp -> LPAREN Exp RPAREN
+33: Exp -> LPAREN Exp RPAREN
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+39: Exp -> STRING
+35: Exp -> ID
+35: Exp -> ID
+40: Exp -> TRUE
+45: Exp -> Exp RELOP Exp
+33: Exp -> LPAREN Exp RPAREN
+43: Exp -> Exp AND Exp
+33: Exp -> LPAREN Exp RPAREN
+45: Exp -> Exp RELOP Exp
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+12: Statements -> Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+30: Type -> INT
+5: RetType -> Type
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+8: Formals -> FormalsList
+37: Exp -> NUM
+37: Exp -> NUM
+34: Exp -> Exp BINOP Exp
+17: Statement -> ID ASSIGN Exp SC
+12: Statements -> Statement
+38: Exp -> NUM B
+37: Exp -> NUM
+40: Exp -> TRUE
+35: Exp -> ID
+37: Exp -> NUM
+33: Exp -> LPAREN Exp RPAREN
+34: Exp -> Exp BINOP Exp
+39: Exp -> STRING
+37: Exp -> NUM
+34: Exp -> Exp BINOP Exp
+40: Exp -> TRUE
+45: Exp -> Exp RELOP Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+30: Type -> INT
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+27: Call -> ID LPAREN RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+12: Statements -> Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+38: Exp -> NUM B
+31: Type -> BYTE
+39: Exp -> STRING
+46: Exp -> LPAREN Type RPAREN Exp
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+33: Exp -> LPAREN Exp RPAREN
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+45: Exp -> Exp RELOP Exp
+30: Type -> INT
+15: Statement -> Type ID SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+37: Exp -> NUM
+41: Exp -> FALSE
+34: Exp -> Exp BINOP Exp
+35: Exp -> ID
+42: Exp -> NOT Exp
+45: Exp -> Exp RELOP Exp
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+35: Exp -> ID
+37: Exp -> NUM
+20: Statement -> RETURN Exp SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+40: Exp -> TRUE
+42: Exp -> NOT Exp
+40: Exp -> TRUE
+20: Statement -> RETURN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+37: Exp -> NUM
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+34: Exp -> Exp BINOP Exp
+40: Exp -> TRUE
+24: Statement -> BREAK SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+32: Type -> BOOL
+40: Exp -> TRUE
+31: Type -> BYTE
+39: Exp -> STRING
+46: Exp -> LPAREN Type RPAREN Exp
+45: Exp -> Exp RELOP Exp
+38: Exp -> NUM B
+38: Exp -> NUM B
+45: Exp -> Exp RELOP Exp
+44: Exp -> Exp OR Exp
+33: Exp -> LPAREN Exp RPAREN
+46: Exp -> LPAREN Type RPAREN Exp
+41: Exp -> FALSE
+17: Statement -> ID ASSIGN Exp SC
+40: Exp -> TRUE
+39: Exp -> STRING
+33: Exp -> LPAREN Exp RPAREN
+42: Exp -> NOT Exp
+37: Exp -> NUM
+34: Exp -> Exp BINOP Exp
+38: Exp -> NUM B
+39: Exp -> STRING
+17: Statement -> ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+35: Exp -> ID
+20: Statement -> RETURN Exp SC
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+31: Type -> BYTE
+5: RetType -> Type
+7: Formals -> epsilon
+41: Exp -> FALSE
+31: Type -> BYTE
+37: Exp -> NUM
+33: Exp -> LPAREN Exp RPAREN
+16: Statement -> Type ID ASSIGN Exp SC
+12: Statements -> Statement
+32: Type -> BOOL
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+38: Exp -> NUM B
+41: Exp -> FALSE
+45: Exp -> Exp RELOP Exp
+37: Exp -> NUM
+37: Exp -> NUM
+45: Exp -> Exp RELOP Exp
+35: Exp -> ID
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+43: Exp -> Exp AND Exp
+44: Exp -> Exp OR Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+37: Exp -> NUM
+33: Exp -> LPAREN Exp RPAREN
+39: Exp -> STRING
+35: Exp -> ID
+41: Exp -> FALSE
+37: Exp -> NUM
+37: Exp -> NUM
+41: Exp -> FALSE
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+42: Exp -> NOT Exp
+40: Exp -> TRUE
+34: Exp -> Exp BINOP Exp
+17: Statement -> ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+39: Exp -> STRING
+42: Exp -> NOT Exp
+39: Exp -> STRING
+17: Statement -> ID ASSIGN Exp SC
+35: Exp -> ID
+31: Type -> BYTE
+15: Statement -> Type ID SC
+12: Statements -> Statement
+30: Type -> INT
+39: Exp -> STRING
+33: Exp -> LPAREN Exp RPAREN
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+42: Exp -> NOT Exp
+38: Exp -> NUM B
+34: Exp -> Exp BINOP Exp
+40: Exp -> TRUE
+44: Exp -> Exp OR Exp
+33: Exp -> LPAREN Exp RPAREN
+45: Exp -> Exp RELOP Exp
+33: Exp -> LPAREN Exp RPAREN
+46: Exp -> LPAREN Type RPAREN Exp
+38: Exp -> NUM B
+33: Exp -> LPAREN Exp RPAREN
+34: Exp -> Exp BINOP Exp
+20: Statement -> RETURN Exp SC
+12: Statements -> Statement
+38: Exp -> NUM B
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+37: Exp -> NUM
+41: Exp -> FALSE
+41: Exp -> FALSE
+31: Type -> BYTE
+41: Exp -> FALSE
+46: Exp -> LPAREN Type RPAREN Exp
+39: Exp -> STRING
+43: Exp -> Exp AND Exp
+33: Exp -> LPAREN Exp RPAREN
+17: Statement -> ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+30: Type -> INT
+41: Exp -> FALSE
+16: Statement -> Type ID ASSIGN Exp SC
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+25: Statement -> CONTINUE SC
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+32: Type -> BOOL
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+21: Statement -> IF LPAREN Exp RPAREN Statement
+12: Statements -> Statement
+37: Exp -> NUM
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+40: Exp -> TRUE
+19: Statement -> RETURN SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+37: Exp -> NUM
+30: Type -> INT
+15: Statement -> Type ID SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+37: Exp -> NUM
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+30: Type -> INT
+5: RetType -> Type
+7: Formals -> epsilon
+19: Statement -> RETURN SC
+12: Statements -> Statement
+31: Type -> BYTE
+38: Exp -> NUM B
+46: Exp -> LPAREN Type RPAREN Exp
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+34: Exp -> Exp BINOP Exp
+24: Statement -> BREAK SC
+12: Statements -> Statement
+31: Type -> BYTE
+39: Exp -> STRING
+46: Exp -> LPAREN Type RPAREN Exp
+33: Exp -> LPAREN Exp RPAREN
+40: Exp -> TRUE
+44: Exp -> Exp OR Exp
+35: Exp -> ID
+41: Exp -> FALSE
+40: Exp -> TRUE
+45: Exp -> Exp RELOP Exp
+38: Exp -> NUM B
+43: Exp -> Exp AND Exp
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+35: Exp -> ID
+41: Exp -> FALSE
+34: Exp -> Exp BINOP Exp
+41: Exp -> FALSE
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+45: Exp -> Exp RELOP Exp
+35: Exp -> ID
+35: Exp -> ID
+34: Exp -> Exp BINOP Exp
+37: Exp -> NUM
+37: Exp -> NUM
+45: Exp -> Exp RELOP Exp
+37: Exp -> NUM
+43: Exp -> Exp AND Exp
+35: Exp -> ID
+32: Type -> BOOL
+35: Exp -> ID
+46: Exp -> LPAREN Type RPAREN Exp
+43: Exp -> Exp AND Exp
+44: Exp -> Exp OR Exp
+40: Exp -> TRUE
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+42: Exp -> NOT Exp
+38: Exp -> NUM B
+41: Exp -> FALSE
+42: Exp -> NOT Exp
+39: Exp -> STRING
+33: Exp -> LPAREN Exp RPAREN
+38: Exp -> NUM B
+34: Exp -> Exp BINOP Exp
+39: Exp -> STRING
+35: Exp -> ID
+32: Type -> BOOL
+38: Exp -> NUM B
+46: Exp -> LPAREN Type RPAREN Exp
+35: Exp -> ID
+34: Exp -> Exp BINOP Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+41: Exp -> FALSE
+35: Exp -> ID
+38: Exp -> NUM B
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+34: Exp -> Exp BINOP Exp
+40: Exp -> TRUE
+45: Exp -> Exp RELOP Exp
+43: Exp -> Exp AND Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+37: Exp -> NUM
+25: Statement -> CONTINUE SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+38: Exp -> NUM B
+31: Type -> BYTE
+37: Exp -> NUM
+42: Exp -> NOT Exp
+46: Exp -> LPAREN Type RPAREN Exp
+45: Exp -> Exp RELOP Exp
+33: Exp -> LPAREN Exp RPAREN
+39: Exp -> STRING
+44: Exp -> Exp OR Exp
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+32: Type -> BOOL
+40: Exp -> TRUE
+46: Exp -> LPAREN Type RPAREN Exp
+43: Exp -> Exp AND Exp
+38: Exp -> NUM B
+31: Type -> BYTE
+37: Exp -> NUM
+46: Exp -> LPAREN Type RPAREN Exp
+33: Exp -> LPAREN Exp RPAREN
+45: Exp -> Exp RELOP Exp
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+44: Exp -> Exp OR Exp
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+33: Exp -> LPAREN Exp RPAREN
+42: Exp -> NOT Exp
+35: Exp -> ID
+34: Exp -> Exp BINOP Exp
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+34: Exp -> Exp BINOP Exp
+38: Exp -> NUM B
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+35: Exp -> ID
+37: Exp -> NUM
+35: Exp -> ID
+33: Exp -> LPAREN Exp RPAREN
+33: Exp -> LPAREN Exp RPAREN
+20: Statement -> RETURN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+35: Exp -> ID
+34: Exp -> Exp BINOP Exp
+35: Exp -> ID
+42: Exp -> NOT Exp
+38: Exp -> NUM B
+44: Exp -> Exp OR Exp
+24: Statement -> BREAK SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+25: Statement -> CONTINUE SC
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+39: Exp -> STRING
+40: Exp -> TRUE
+34: Exp -> Exp BINOP Exp
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+20: Statement -> RETURN Exp SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+30: Type -> INT
+35: Exp -> ID
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+35: Exp -> ID
+39: Exp -> STRING
+45: Exp -> Exp RELOP Exp
+39: Exp -> STRING
+42: Exp -> NOT Exp
+17: Statement -> ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+32: Type -> BOOL
+5: RetType -> Type
+7: Formals -> epsilon
+38: Exp -> NUM B
+37: Exp -> NUM
+40: Exp -> TRUE
+44: Exp -> Exp OR Exp
+33: Exp -> LPAREN Exp RPAREN
+45: Exp -> Exp RELOP Exp
+20: Statement -> RETURN Exp SC
+12: Statements -> Statement
+30: Type -> INT
+35: Exp -> ID
+41: Exp -> FALSE
+42: Exp -> NOT Exp
+33: Exp -> LPAREN Exp RPAREN
+35: Exp -> ID
+41: Exp -> FALSE
+42: Exp -> NOT Exp
+34: Exp -> Exp BINOP Exp
+35: Exp -> ID
+45: Exp -> Exp RELOP Exp
+44: Exp -> Exp OR Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+46: Exp -> LPAREN Type RPAREN Exp
+33: Exp -> LPAREN Exp RPAREN
+27: Call -> ID LPAREN RPAREN
+18: Statement -> Call SC
+38: Exp -> NUM B
+30: Type -> INT
+35: Exp -> ID
+42: Exp -> NOT Exp
+41: Exp -> FALSE
+33: Exp -> LPAREN Exp RPAREN
+39: Exp -> STRING
+34: Exp -> Exp BINOP Exp
+45: Exp -> Exp RELOP Exp
+16: Statement -> Type ID ASSIGN Exp SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+35: Exp -> ID
+42: Exp -> NOT Exp
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+12: Statements -> Statement
+27: Call -> ID LPAREN RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+30: Type -> INT
+40: Exp -> TRUE
+33: Exp -> LPAREN Exp RPAREN
+33: Exp -> LPAREN Exp RPAREN
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+39: Exp -> STRING
+33: Exp -> LPAREN Exp RPAREN
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+35: Exp -> ID
+43: Exp -> Exp AND Exp
+30: Type -> INT
+39: Exp -> STRING
+46: Exp -> LPAREN Type RPAREN Exp
+30: Type -> INT
+31: Type -> BYTE
+40: Exp -> TRUE
+38: Exp -> NUM B
+37: Exp -> NUM
+42: Exp -> NOT Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+46: Exp -> LPAREN Type RPAREN Exp
+33: Exp -> LPAREN Exp RPAREN
+42: Exp -> NOT Exp
+16: Statement -> Type ID ASSIGN Exp SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+12: Statements -> Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+39: Exp -> STRING
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+35: Exp -> ID
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+38: Exp -> NUM B
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+24: Statement -> BREAK SC
+13: Statements -> Statements Statement
+38: Exp -> NUM B
+33: Exp -> LPAREN Exp RPAREN
+30: Type -> INT
+15: Statement -> Type ID SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+12: Statements -> Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+31: Type -> BYTE
+5: RetType -> Type
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+10: FormalsList -> FormalDecl COMMA FormalsList
+8: Formals -> FormalsList
+30: Type -> INT
+15: Statement -> Type ID SC
+12: Statements -> Statement
+40: Exp -> TRUE
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+39: Exp -> STRING
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+40: Exp -> TRUE
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+37: Exp -> NUM
+34: Exp -> Exp BINOP Exp
+33: Exp -> LPAREN Exp RPAREN
+34: Exp -> Exp BINOP Exp
+33: Exp -> LPAREN Exp RPAREN
+31: Type -> BYTE
+39: Exp -> STRING
+46: Exp -> LPAREN Type RPAREN Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+38: Exp -> NUM B
+33: Exp -> LPAREN Exp RPAREN
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+39: Exp -> STRING
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+19: Statement -> RETURN SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+30: Type -> INT
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+31: Type -> BYTE
+5: RetType -> Type
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+8: Formals -> FormalsList
+39: Exp -> STRING
+20: Statement -> RETURN Exp SC
+12: Statements -> Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+35: Exp -> ID
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+31: Type -> BYTE
+41: Exp -> FALSE
+46: Exp -> LPAREN Type RPAREN Exp
+34: Exp -> Exp BINOP Exp
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+37: Exp -> NUM
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+30: Type -> INT
+35: Exp -> ID
+42: Exp -> NOT Exp
+39: Exp -> STRING
+34: Exp -> Exp BINOP Exp
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+35: Exp -> ID
+42: Exp -> NOT Exp
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+35: Exp -> ID
+46: Exp -> LPAREN Type RPAREN Exp
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+6: RetType ->  VOID
+30: Type -> INT
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+32: Type -> BOOL
+11: FormalDecl -> Type ID
+30: Type -> INT
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+10: FormalsList -> FormalDecl COMMA FormalsList
+8: Formals -> FormalsList
+37: Exp -> NUM
+42: Exp -> NOT Exp
+39: Exp -> STRING
+43: Exp -> Exp AND Exp
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+12: Statements -> Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+35: Exp -> ID
+42: Exp -> NOT Exp
+38: Exp -> NUM B
+42: Exp -> NOT Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+30: Type -> INT
+41: Exp -> FALSE
+33: Exp -> LPAREN Exp RPAREN
+46: Exp -> LPAREN Type RPAREN Exp
+31: Type -> BYTE
+37: Exp -> NUM
+42: Exp -> NOT Exp
+16: Statement -> Type ID ASSIGN Exp SC
+21: Statement -> IF LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+31: Type -> BYTE
+40: Exp -> TRUE
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+12: Statements -> Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+6: RetType ->  VOID
+30: Type -> INT
+11: FormalDecl -> Type ID
+31: Type -> BYTE
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+10: FormalsList -> FormalDecl COMMA FormalsList
+8: Formals -> FormalsList
+35: Exp -> ID
+41: Exp -> FALSE
+45: Exp -> Exp RELOP Exp
+33: Exp -> LPAREN Exp RPAREN
+20: Statement -> RETURN Exp SC
+12: Statements -> Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+37: Exp -> NUM
+33: Exp -> LPAREN Exp RPAREN
+42: Exp -> NOT Exp
+43: Exp -> Exp AND Exp
+17: Statement -> ID ASSIGN Exp SC
+12: Statements -> Statement
+25: Statement -> CONTINUE SC
+13: Statements -> Statements Statement
+27: Call -> ID LPAREN RPAREN
+18: Statement -> Call SC
+13: Statements -> Statements Statement
+32: Type -> BOOL
+41: Exp -> FALSE
+41: Exp -> FALSE
+34: Exp -> Exp BINOP Exp
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+41: Exp -> FALSE
+41: Exp -> FALSE
+32: Type -> BOOL
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+46: Exp -> LPAREN Type RPAREN Exp
+45: Exp -> Exp RELOP Exp
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+28: ExpList -> Exp
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+41: Exp -> FALSE
+35: Exp -> ID
+45: Exp -> Exp RELOP Exp
+33: Exp -> LPAREN Exp RPAREN
+42: Exp -> NOT Exp
+40: Exp -> TRUE
+33: Exp -> LPAREN Exp RPAREN
+45: Exp -> Exp RELOP Exp
+38: Exp -> NUM B
+42: Exp -> NOT Exp
+40: Exp -> TRUE
+39: Exp -> STRING
+42: Exp -> NOT Exp
+43: Exp -> Exp AND Exp
+39: Exp -> STRING
+39: Exp -> STRING
+40: Exp -> TRUE
+31: Type -> BYTE
+39: Exp -> STRING
+46: Exp -> LPAREN Type RPAREN Exp
+41: Exp -> FALSE
+41: Exp -> FALSE
+30: Type -> INT
+40: Exp -> TRUE
+46: Exp -> LPAREN Type RPAREN Exp
+45: Exp -> Exp RELOP Exp
+40: Exp -> TRUE
+41: Exp -> FALSE
+38: Exp -> NUM B
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+40: Exp -> TRUE
+42: Exp -> NOT Exp
+39: Exp -> STRING
+45: Exp -> Exp RELOP Exp
+43: Exp -> Exp AND Exp
+37: Exp -> NUM
+42: Exp -> NOT Exp
+44: Exp -> Exp OR Exp
+40: Exp -> TRUE
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+40: Exp -> TRUE
+41: Exp -> FALSE
+39: Exp -> STRING
+37: Exp -> NUM
+34: Exp -> Exp BINOP Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+34: Exp -> Exp BINOP Exp
+33: Exp -> LPAREN Exp RPAREN
+41: Exp -> FALSE
+42: Exp -> NOT Exp
+45: Exp -> Exp RELOP Exp
+39: Exp -> STRING
+38: Exp -> NUM B
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+37: Exp -> NUM
+31: Type -> BYTE
+35: Exp -> ID
+46: Exp -> LPAREN Type RPAREN Exp
+28: ExpList -> Exp
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+29: ExpList -> Exp COMMA ExpList
+26: Call -> ID LPAREN ExpList RPAREN
+36: Exp -> Call
+41: Exp -> FALSE
+43: Exp -> Exp AND Exp
+44: Exp -> Exp OR Exp
+20: Statement -> RETURN Exp SC
+13: Statements -> Statements Statement
+37: Exp -> NUM
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+40: Exp -> TRUE
+27: Call -> ID LPAREN RPAREN
+18: Statement -> Call SC
+23: Statement -> WHILE LPAREN Exp RPAREN Statement
+13: Statements -> Statements Statement
+39: Exp -> STRING
+42: Exp -> NOT Exp
+25: Statement -> CONTINUE SC
+30: Type -> INT
+30: Type -> INT
+38: Exp -> NUM B
+46: Exp -> LPAREN Type RPAREN Exp
+38: Exp -> NUM B
+43: Exp -> Exp AND Exp
+16: Statement -> Type ID ASSIGN Exp SC
+22: Statement -> IF LPAREN Exp RPAREN Statement ELSE Statement
+13: Statements -> Statements Statement
+14: Statement -> LBRACE Statements RBRACE
+13: Statements -> Statements Statement
+31: Type -> BYTE
+15: Statement -> Type ID SC
+13: Statements -> Statements Statement
+31: Type -> BYTE
+39: Exp -> STRING
+40: Exp -> TRUE
+44: Exp -> Exp OR Exp
+33: Exp -> LPAREN Exp RPAREN
+16: Statement -> Type ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+19: Statement -> RETURN SC
+13: Statements -> Statements Statement
+27: Call -> ID LPAREN RPAREN
+36: Exp -> Call
+33: Exp -> LPAREN Exp RPAREN
+17: Statement -> ID ASSIGN Exp SC
+13: Statements -> Statements Statement
+4: FuncDecl -> RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE
+2: Funcs -> epsilon
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+3: Funcs -> FuncDecl Funcs
+1: Program -> Funcs

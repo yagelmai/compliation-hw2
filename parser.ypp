@@ -4,8 +4,7 @@
 	#include <stdlib.h>
 	#include <stdio.h>
 	#include "output.hpp"
-
-	using namespace std;
+    using namespace output;
 	int yylex();
 	extern int yylineno;
 	void yyerror(const char*);

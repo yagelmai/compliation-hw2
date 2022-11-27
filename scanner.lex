@@ -5,6 +5,8 @@
 #include <stdio.h>
 void showToken(char *);
 void printundef();
+#include "output.hpp"
+using namespace output;
 %}
 
 %option yylineno
@@ -45,26 +47,12 @@ continue                    return CONTINUE;
 [a-zA-Z][0-9a-zA-Z]*        return ID;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\\\n\r\"]|{es})*\"     return STRING;
-\"([^\\\n\r\"]|{es})*       printf("Error unclosed string\n");exit(0);
+\"([^\\\n\r\"]|{es})*       errorLex(yylineno);exit(0);
 {whitespace}				return -1;
-.		printf("Error %s\n",yytext);exit(0);
+.		                    errorLex(yylineno);exit(0);
 
 %%
-void printundef()//needs fix
-{
-    char* current=yytext;
-    printf("Error undefined escape sequence %c\n",current[yyleng-1]);
-}
-void printundefx()
-{
-    char* current=yytext;
-    printf("Error undefined escape sequence %c%c%c\n",current[yyleng-3],current[yyleng-2],current[yyleng-1]);
-}
-void printundefx2()
-{
-    char* current=yytext;
-    printf("Error undefined escape sequence %c%c\n",current[yyleng-2],current[yyleng-1]);
-}
+
 void showToken(char * name)
 {
         if(name=="STRING"){
