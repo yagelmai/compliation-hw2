@@ -3,6 +3,7 @@
 /* Declarations section */
 #include "tokens.hpp"
 #include <stdio.h>
+#include "output.hpp"
 void showToken(char *);
 void printundef();
 %}
@@ -45,8 +46,8 @@ continue                    return CONTINUE;
 [a-zA-Z][0-9a-zA-Z]*        return ID;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\\\n\r\"]|{es})*\"     return STRING;
-\"([^\\\n\r\"]|{es})*       printf("Error unclosed string\n");exit(0);
-\"([^\\\n\r\"]|{es})*\\.([^\\\n\r\"]|{es})*\"      return STRING;//printundef();exit(0);
+\"([^\\\n\r\"]|{es})*       errorLex(yylineno);exit(0);
+\"([^\n\r\"]|{es})*\"       errorLex(yylineno);exit(0);//printundef();exit(0);
 {whitespace}				return -1;
 .		printf("Error %s\n",yytext);exit(0);
 
