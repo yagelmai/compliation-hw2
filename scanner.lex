@@ -49,7 +49,7 @@ continue                    return CONTINUE;
 \"([^\\\n\r\"]|{es})*       errorLex(yylineno);exit(0);
 \"([^\n\r\"]|{es})*\"       errorLex(yylineno);exit(0);//printundef();exit(0);
 {whitespace}				return -1;
-.		printf("Error %s\n",yytext);exit(0);
+.		errorLex(yylineno);exit(0);
 
 %%
 void printundef()//needs fix
