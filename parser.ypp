@@ -47,7 +47,7 @@
 Prog:               Funcs               										{printProductionRule(1);}
 ;
 
-Funcs:              FuncDecl Funcs    										{printProductionRule(3);}/* epsilon */       										{printProductionRule(2);}
+Funcs:              FuncDecl Funcs    										{printProductionRule(3);}
                     | /* epsilon */       										{printProductionRule(2);}
 ;
 
@@ -58,7 +58,7 @@ RetType:            Type                										{printProductionRule(5);}
                     |  VOID             										{printProductionRule(6);}
 ;
 
-Formals:            FormalsList       										{printProductionRule(8);}/* epsilon */       										{printProductionRule(7);}
+Formals:            FormalsList       										{printProductionRule(8);}
                     | /* epsilon */       										{printProductionRule(7);}
 ;
 
