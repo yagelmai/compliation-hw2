@@ -6,6 +6,7 @@
 void showToken(char *);
 void printundef();
 #include "output.hpp"
+#include "parser.tab.hpp"
 using namespace output;
 %}
 
