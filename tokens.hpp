@@ -28,11 +28,12 @@
     RBRACE = 22,
     ASSIGN = 23,
     RELOP = 24,
-    BINOP = 25,
+    LBINOP = 25,
     COMMENT = 26,
     ID = 27,
     NUM = 28,
-    STRING = 29
+    STRING = 29,
+    RBINOP = 30
   };
   extern int yylineno;
   extern char* yytext;

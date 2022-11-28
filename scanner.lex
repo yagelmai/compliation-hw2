@@ -48,7 +48,7 @@ continue                    return CONTINUE;
 \/\/[^\r\n]*                return COMMENT;
 [a-zA-Z][0-9a-zA-Z]*        return ID;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
-\"([^\\\n\r\"]|{es})*\"     return STRING;
+\"([^\n\r\"\\]|\\[rnt"\\])+\" return STRING;
 \"([^\\\n\r\"]|{es})*       errorLex(yylineno);exit(0);
 {whitespace}				return -1;
 .		                    errorLex(yylineno);exit(0);
