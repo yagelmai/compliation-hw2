@@ -49,7 +49,7 @@ continue                    return CONTINUE;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\n\r\"\\]|\\[rnt"\\])+\" return STRING;
 \"([^\\\n\r\"]|{es})*       errorLex(yylineno);exit(0);
-{whitespace}				return -1;
+{whitespace}				;
 .		                    errorLex(yylineno);exit(0);
 
 %%
