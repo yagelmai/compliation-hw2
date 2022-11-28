@@ -1,9 +1,9 @@
 %{ 
 	#include <iostream>
-	#include "tokens.hpp"	
+	#include "parser.tab.hpp"	
 	#include <stdlib.h>
 	#include <stdio.h>
-	#include "parser.tab.hpp"
+	#include "output.hpp"
     using namespace output;
 	int yylex();
 	extern int yylineno;
