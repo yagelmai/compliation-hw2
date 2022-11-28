@@ -14,9 +14,12 @@
 %right ASSIGN
 %left OR
 %left AND
-%left LBINOP
+%left RELOP
 %left RBINOP
+%left LBINOP
 %right NOT
+%left LPAREN
+%left RPAREN
 %token VOID
 %token INT
 %token BYTE
@@ -37,9 +40,6 @@
 %token ID
 %token NUM
 %token STRING
-%token LPAREN
-%token RPAREN
-%left RELOP
 
 
 %%
