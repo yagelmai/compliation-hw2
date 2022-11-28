@@ -51,7 +51,7 @@ Funcs:              FuncDecl Funcs    										{printProductionRule(3);}
                     | /* epsilon */       										{printProductionRule(2);}
 ;
 
-FuncDecl:           RetType ID{printProductionRule(1);} LPAREN{printProductionRule(1);} Formals{printProductionRule(1);} RPAREN LBRACE Statements RBRACE   {printProductionRule(4);}
+FuncDecl:           RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE   {printProductionRule(4);}
 ;
 
 RetType:            Type                										{printProductionRule(5);}
