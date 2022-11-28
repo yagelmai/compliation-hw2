@@ -2,7 +2,6 @@
 
 /* Declarations section */
 #include <stdio.h>
-void showToken(char *);
 void printundef();
 #include "output.hpp"
 #include "parser.tab.hpp"
@@ -15,6 +14,7 @@ digit   		([0-9])
 letter  		([a-zA-Z])
 whitespace		([\t\n\r ])
 es              (\x5C\x5C|\x5C\x22|\x5C\x6E|\x5C\x72|\x5C\x74|\x5C\x30|\x5C\x78[0-9A-F][0-9A-F]|\\[^"])
+
 l_binop [(\*|\/)]
 r_binop [(\+|\-)]
 %%
@@ -49,22 +49,8 @@ continue                    return CONTINUE;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\n\r\"\\]|\\[rnt"\\])+\" return STRING;
 \"([^\\\n\r\"]|{es})*       errorLex(yylineno);exit(0);
-{whitespace}				;
+{whitespace}|\/\/[^\r\n]* 				;
 .		                    errorLex(yylineno);exit(0);
 
 %%
 
-void showToken(char * name)
-{
-        if(name=="STRING"){
-
-        }
-        else{
-            if(name=="SC"){
-
-            }
-            else{
-                printf("<%d> <%s> <%s>\n", yylineno, name, yytext);
-            }
-        }
-}

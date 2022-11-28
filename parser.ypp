@@ -41,6 +41,7 @@
 %nonassoc STRING
 
 
+
 %%
 
 
@@ -99,8 +100,7 @@ Type:               INT                         								{printProductionRule(30)
                     | BOOL                      								{printProductionRule(32);}
 ;
 
-Exp:                LPAREN Exp RPAREN           								{printProductionRule(33);}
-                    | Exp MULTIPLICATIVE Exp           						    {printProductionRule(34);}
+Exp:                LPAREN Exp RPAREN           								{printProductionRule(33);}                    | Exp MULTIPLICATIVE Exp           						    {printProductionRule(34);}
                     | Exp ADDITIVE Exp           								{printProductionRule(34);}
                     | ID                        								{printProductionRule(35);}
                     | Call                      								{printProductionRule(36);}
@@ -112,8 +112,9 @@ Exp:                LPAREN Exp RPAREN           								{printProductionRule(33)
                     | NOT Exp                   								{printProductionRule(42);}
                     | Exp AND Exp               								{printProductionRule(43);}
                     | Exp OR Exp                								{printProductionRule(44);}
-                    | Exp RELATIONAL Exp             								{printProductionRule(45);}
+                    | Exp RELATIONAL Exp             							{printProductionRule(45);}
                     | LPAREN Type RPAREN Exp    								{printProductionRule(46);}
+
 ;
 
 %%

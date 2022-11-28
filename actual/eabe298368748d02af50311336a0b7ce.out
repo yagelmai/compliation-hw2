@@ -1,0 +1,12 @@
+30: Type -> INT
+5: RetType -> Type
+30: Type -> INT
+11: FormalDecl -> Type ID
+9: FormalsList -> FormalDecl
+8: Formals -> FormalsList
+39: Exp -> STRING
+40: Exp -> TRUE
+39: Exp -> STRING
+43: Exp -> Exp AND Exp
+44: Exp -> Exp OR Exp
+line 2: syntax error

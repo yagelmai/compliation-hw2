@@ -1,0 +1,4 @@
+30: Type -> INT
+5: RetType -> Type
+7: Formals -> epsilon
+line 2: lexical error
