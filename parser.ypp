@@ -3,7 +3,7 @@
 	#include "tokens.hpp"	
 	#include <stdlib.h>
 	#include <stdio.h>
-	#include "output.hpp"
+	#include "parser.tab.hpp"
     using namespace output;
 	int yylex();
 	extern int yylineno;
@@ -14,9 +14,9 @@
 %right ASSIGN
 %left OR
 %left AND
-%left RELOP
-%left RBINOP
-%left LBINOP
+%left RELATIONAL
+%left ADDITIVE
+%left MULTIPLICATIVE
 %right NOT
 %left LPAREN
 %left RPAREN
@@ -110,8 +110,8 @@ Type:               INT                         								{printProductionRule(30)
 ;
 
 Exp:                LPAREN Exp RPAREN           								{printProductionRule(33);}
-                    | Exp LBINOP Exp           								    {printProductionRule(34);}
-                    | Exp RBINOP Exp           								    {printProductionRule(34);}
+                    | Exp MULTIPLICATIVE Exp           								    {printProductionRule(34);}
+                    | Exp ADDITIVE Exp           								    {printProductionRule(34);}
                     | ID                        								{printProductionRule(35);}
                     | Call                      								{printProductionRule(36);}
                     | NUM                       								{printProductionRule(37);}
@@ -122,7 +122,7 @@ Exp:                LPAREN Exp RPAREN           								{printProductionRule(33)
                     | NOT Exp                   								{printProductionRule(42);}
                     | Exp AND Exp               								{printProductionRule(43);}
                     | Exp OR Exp                								{printProductionRule(44);}
-                    | Exp RELOP Exp             								{printProductionRule(45);}
+                    | Exp RELATIONAL Exp             								{printProductionRule(45);}
                     | LPAREN Type RPAREN Exp    								{printProductionRule(46);}
 ;
 

@@ -5,7 +5,7 @@
 void showToken(char *);
 void printundef();
 #include "output.hpp"
-#include "tokens.hpp"
+#include "parser.tab.hpp"
 using namespace output;
 %}
 
@@ -42,9 +42,9 @@ continue                    return CONTINUE;
 \{                          return LBRACE;
 \}                          return RBRACE;
 =                           return ASSIGN;
-==|!=|<=|>=|<|>             return RELOP;
-{l_binop}                   return LBINOP;
-{r_binop}                   return RBINOP;
+==|!=|<=|>=|<|>             return RELATIONAL;
+{l_binop}                   return MULTIPLICATIVE;
+{r_binop}                   return ADDITIVE;
 [a-zA-Z][0-9a-zA-Z]*        return ID;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\n\r\"\\]|\\[rnt"\\])+\" return STRING;
