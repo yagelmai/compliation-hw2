@@ -1,7 +1,6 @@
 %{
 
 /* Declarations section */
-#include "tokens.hpp"
 #include <stdio.h>
 void showToken(char *);
 void printundef();
@@ -46,7 +45,6 @@ continue                    return CONTINUE;
 ==|!=|<=|>=|<|>             return RELOP;
 {l_binop}                   return LBINOP;
 {r_binop}                   return RBINOP;
-\/\/[^\r\n]*                return COMMENT;
 [a-zA-Z][0-9a-zA-Z]*        return ID;
 [1-9][0-9]*|0               return NUM;//what to do when number starts with 0?
 \"([^\n\r\"\\]|\\[rnt"\\])+\" return STRING;

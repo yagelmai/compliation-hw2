@@ -20,26 +20,26 @@
 %right NOT
 %left LPAREN
 %left RPAREN
-%token VOID
-%token INT
-%token BYTE
-%token B
-%token BOOL
-%token TRUE
-%token FALSE
-%token RETURN
-%token IF
-%left ELSE
-%token WHILE
-%token BREAK
-%token CONTINUE
-%token SC
-%token COMMA
-%token LBRACE
-%token RBRACE
-%token ID
-%token NUM
-%token STRING
+%nonassoc VOID
+%nonassoc INT
+%nonassoc BYTE
+%nonassoc B
+%nonassoc BOOL
+%nonassoc TRUE
+%nonassoc FALSE
+%nonassoc RETURN
+%nonassoc IF
+%nonassoc ELSE
+%nonassoc WHILE
+%nonassoc BREAK
+%nonassoc CONTINUE
+%nonassoc SC
+%nonassoc COMMA
+%nonassoc LBRACE
+%nonassoc RBRACE
+%nonassoc ID
+%nonassoc NUM
+%nonassoc STRING
 
 
 %%
