@@ -47,8 +47,8 @@
 Prog:               Funcs               										{printProductionRule(1);}
 ;
 
-Funcs:              /* epsilon */       										{printProductionRule(2);}
-                    | FuncDecl Funcs    										{printProductionRule(3);}
+Funcs:              FuncDecl Funcs    										{printProductionRule(3);}/* epsilon */       										{printProductionRule(2);}
+                    | /* epsilon */       										{printProductionRule(2);}
 ;
 
 FuncDecl:           RetType ID LPAREN Formals RPAREN LBRACE Statements RBRACE   {printProductionRule(4);}
@@ -58,8 +58,8 @@ RetType:            Type                										{printProductionRule(5);}
                     |  VOID             										{printProductionRule(6);}
 ;
 
-Formals:            /* epsilon */       										{printProductionRule(7);}
-                    | FormalsList       										{printProductionRule(8);}
+Formals:            FormalsList       										{printProductionRule(8);}/* epsilon */       										{printProductionRule(7);}
+                    | /* epsilon */       										{printProductionRule(7);}
 ;
 
 FormalsList:        FormalDecl          										{printProductionRule(9);}
